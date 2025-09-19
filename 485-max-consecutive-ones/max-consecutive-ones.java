@@ -4,12 +4,13 @@ class Solution {
        for(int num:nums){
         if(num==1){
             x++;
-            y=Math.max(x,y);
         }
         else{
+            y=Math.max(x,y);
             x=0;
         }
        } 
+       y=Math.max(x,y);
        return y;
     }
 }
