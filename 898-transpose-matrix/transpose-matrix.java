@@ -7,6 +7,7 @@ class Solution {
                 res[j][i]=matrix[i][j];
             }
         }
+        System.gc();
         return res;
     }
 }
