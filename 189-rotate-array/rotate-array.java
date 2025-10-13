@@ -2,23 +2,18 @@ class Solution {
     public void rotate(int[] nums, int k) {
         int n=nums.length;
         k=k%n;
-        //Rotate the array
-        for(int i=0;i<n/2;i++){
-            int t=nums[i];
-            nums[i]=nums[n-i-1];
-            nums[n-i-1]=t;
-        }
-        //Rotate first k elements
-        for(int i=0;i<k/2;i++){
-            int t=nums[i];
-            nums[i]=nums[k-i-1];
-            nums[k-i-1]=t;
-        }
-        //Rotate the remaining elemnets
-        for(int i=0;i<(n-k)/2;i++){
-            int t=nums[k+i];
-            nums[k+i]=nums[n-i-1];
-            nums[n-i-1]=t;
+        reverse(nums,0,n-1);
+        reverse(nums,0,k-1);
+        reverse(nums,k,n-1);
+        
+    }
+    private void reverse(int[] arr,int a,int b){
+        while(a<b){
+            int t=arr[a];
+            arr[a]=arr[b];
+            arr[b]=t;
+            a++;
+            b--;
         }
     }
 }
