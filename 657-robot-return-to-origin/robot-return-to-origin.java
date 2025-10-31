@@ -7,7 +7,6 @@ class Solution {
             else if(ch=='L') x+=1;
             else x-=1;
         }
-        if(x==0 && y==0) return true;
-        return false;
+        return (x==0 && y==0);
     }
 }
