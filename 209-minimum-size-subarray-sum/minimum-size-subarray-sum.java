@@ -1,8 +1,7 @@
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {
         if(nums.length == 1){
-            if(nums[0] >= target) return 1;
-            return 0;
+            return nums[0]>=target? 1 : 0;
         }
         int i = 0 , j = 0;
         int minlen = nums.length+1, sum = 0;
