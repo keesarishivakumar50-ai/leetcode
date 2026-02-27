@@ -27,6 +27,7 @@ class Solution {
         }
         
         int i = 0 , j = 0 , k = left;
+        
         while(i < n1 && j < n2){
             if(L[i] <= R[j]){
                 arr[k] = L[i];
@@ -37,9 +38,11 @@ class Solution {
             }
             k++;
         }
+        
         while(i < n1){
             arr[k++] = L[i++];
         }
+        
         while(j < n2){
             arr[k++] = R[j++];
         }
