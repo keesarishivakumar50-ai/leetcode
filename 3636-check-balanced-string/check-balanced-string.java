@@ -10,8 +10,6 @@ class Solution {
                 odd += x;
             }
         }
-        System.out.println(even);
-        System.out.println(odd);
         return (even == odd);
     }
 }
