@@ -6,8 +6,7 @@ class Solution {
         int r = 1;
         for(int x : dummy){
             if(!rank.containsKey(x)){
-                rank.put(x , r);
-                r++;
+                rank.put(x , r++);
             }
         }
         for(int i = 0 ; i < arr.length ; i++){
