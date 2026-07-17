@@ -18,10 +18,7 @@ class Solution {
             }
        }
         int sum = 0;
-        int len = stack.size();
-        for(int i = 0 ; i < len ; i++){
-            sum = sum + stack.pop();
-        }
+        for(int x : stack) sum += x;
         return sum; 
     }
 }
