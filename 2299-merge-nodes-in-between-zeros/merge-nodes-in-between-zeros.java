@@ -11,17 +11,17 @@
 class Solution {
     public ListNode mergeNodes(ListNode head) {
        ListNode first = head.next;
-       ListNode sum = first;
+       ListNode second = first;
 
-       while(sum != null){
-        int s = 0;
-        while(sum.val != 0){
-            s += sum.val;
-            sum = sum.next;
+       while(second != null){
+        int sum = 0;
+        while(second.val != 0){
+            sum += second.val;
+            second = second.next;
         }
-        first.val = s;
-        sum = sum.next;
-        first.next = sum;
+        first.val = sum;
+        second = second.next;
+        first.next = second;
         first = first.next;
        }
        return head.next;
