@@ -15,9 +15,8 @@ class Solution {
                     ten--;
                     five--;
                 }
-                else if(five > 0 && ten == 0){
-                    if(five > 2) five = five - 3;
-                    else return false;
+                else if(five > 2){
+                    five = five - 3;
                 }
                 else return false;
             }
